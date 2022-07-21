@@ -1,0 +1,16 @@
+{
+    "name": "colourful",
+    "definitions": {
+        "red": {"platinum": "bf4040", "graphite": "ff6666"},
+        "yellow": {"platinum": "d68d1f", "graphite": "ffbc57"},
+        "green": {"platinum": "169c44", "graphite": "26d964"},
+        "blue": {"platinum": "006fb2", "graphite": "4cbcff"},
+        "purple": {"platinum": "af38cd", "graphite": "e066ff"},
+        "grey": {"platinum": "3f3f3f", "graphite": "ebebeb"}
+    },
+    "icon_default": "grey",
+    "icon_overlay": "grey",
+    "icons": {
+        "Accessory": "purple"
+    }
+}

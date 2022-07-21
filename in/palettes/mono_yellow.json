@@ -1,0 +1,10 @@
+{
+    "name": "mono_yellow",
+    "definitions": {
+        "yellow": {"platinum": "d68d1f", "graphite": "ffbc57"},
+        "grey": {"platinum": "3f3f3f", "graphite": "ebebeb"}
+    },
+    "icon_default": "yellow",
+    "icon_overlay": "grey",
+    "icons": {}
+}

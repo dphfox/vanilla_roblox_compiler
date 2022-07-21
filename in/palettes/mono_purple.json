@@ -1,0 +1,10 @@
+{
+    "name": "mono_purple",
+    "definitions": {
+        "purple": {"platinum": "af38cd", "graphite": "e066ff"},
+        "grey": {"platinum": "3f3f3f", "graphite": "ebebeb"}
+    },
+    "icon_default": "purple",
+    "icon_overlay": "grey",
+    "icons": {}
+}

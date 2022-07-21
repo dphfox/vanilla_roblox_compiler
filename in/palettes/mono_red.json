@@ -1,0 +1,10 @@
+{
+    "name": "mono_red",
+    "definitions": {
+        "red": {"platinum": "bf4040", "graphite": "ff6666"},
+        "grey": {"platinum": "3f3f3f", "graphite": "ebebeb"}
+    },
+    "icon_default": "red",
+    "icon_overlay": "grey",
+    "icons": {}
+}

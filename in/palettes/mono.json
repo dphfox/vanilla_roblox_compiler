@@ -1,0 +1,9 @@
+{
+    "name": "mono",
+    "definitions": {
+        "grey": {"platinum": "3f3f3f", "graphite": "ebebeb"}
+    },
+    "icon_default": "grey",
+    "icon_overlay": "grey",
+    "icons": {}
+}
