@@ -1,10 +1,18 @@
 {
     "name": "mono_blue",
     "definitions": {
-        "blue": {"platinum": "006fb2", "graphite": "4cbcff"},
-        "grey": {"platinum": "3f3f3f", "graphite": "ebebeb"}
+        "platinum": {
+            "blue": "006fb2",
+            "grey": "3f3f3f"
+        },
+        "graphite": {
+            "blue": "4cbcff",
+            "grey": "ebebeb"
+        }
     },
     "icon_default": "blue",
     "icon_overlay": "grey",
+    "single_tone_opacity": 0.6,
+    "duotone_fallback_opacity": 0.6,
     "icons": {}
 }

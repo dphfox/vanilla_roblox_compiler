@@ -1,16 +1,30 @@
 {
     "name": "colourful",
     "definitions": {
-        "red": {"platinum": "bf4040", "graphite": "ff6666"},
-        "yellow": {"platinum": "d68d1f", "graphite": "ffbc57"},
-        "green": {"platinum": "169c44", "graphite": "26d964"},
-        "blue": {"platinum": "006fb2", "graphite": "4cbcff"},
-        "purple": {"platinum": "af38cd", "graphite": "e066ff"},
-        "grey": {"platinum": "3f3f3f", "graphite": "ebebeb"}
+        "platinum": {
+            "red": "bf4040",
+            "yellow": "d68d1f",
+            "green": "169c44",
+            "blue": "006fb2",
+            "purple": "af38cd",
+            "grey": "3f3f3f"
+        },
+        "graphite": {
+            "red": "ff6666",
+            "yellow": "ffbc57",
+            "green": "26d964",
+            "blue": "4cbcff",
+            "purple": "e066ff",
+            "grey": "ebebeb"
+        }
     },
     "icon_default": "grey",
     "icon_overlay": "grey",
+    "single_tone_opacity": 0.6,
+    "duotone_fallback_opacity": 0.6,
     "icons": {
-        "Accessory": "purple"
+        "Accessory": "purple",
+        "AnalysticsService": "blue",
+        "AnalyticsService": "green"
     }
 }

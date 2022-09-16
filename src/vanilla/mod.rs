@@ -2,7 +2,6 @@
 use anyhow::Result;
 use usvg::*;
 use std::collections::HashMap;
-use std::rc::Rc;
 
 mod vanilla_serde;
 pub enum IconLayerColours {
@@ -86,9 +85,12 @@ impl IconPackLayerStyle {
 }
 
 pub struct IconPackPalette {
-    pub definitions: HashMap<String, HashMap<IconPackTheme, Color>>,
+    pub name: String,
+    pub definitions: HashMap<IconPackTheme, HashMap<String, Color>>,
     pub icon_default: String,
     pub icon_overlay: String,
+    pub single_tone_opacity: f64,
+    pub duotone_fallback_opacity: f64,
     pub icons: HashMap<String, String>
 }
 
@@ -98,8 +100,8 @@ pub struct IconPackMappings {
 }
 
 pub struct IconData {
-    pub primary_path_data: Rc<PathData>,
-    pub secondary_path_data: Option<Rc<PathData>>
+    pub primary_path_data: PathData,
+    pub secondary_path_data: Option<PathData>
 }
 
 impl IconData {
@@ -113,15 +115,15 @@ impl IconData {
             if let NodeKind::Path(ref mut path) = *node.borrow_mut() {
                 let fill = path.fill.as_ref().ok_or(anyhow::anyhow!("No fill found for path"))?;
                 let is_secondary = fill.opacity.to_u8() < 200;
-                
+
                 if is_secondary {
                     secondary_data = match secondary_data {
-                        None => Some(path.data.clone()),
+                        None => Some(path.data.as_ref().clone()),
                         Some(_) => anyhow::bail!("Icon has two secondary layers")
                     }
                 } else {
                     primary_data = match primary_data {
-                        None => Some(path.data.clone()),
+                        None => Some(path.data.as_ref().clone()),
                         Some(_) => anyhow::bail!("Icon has two primary layers")
                     }
                 }
