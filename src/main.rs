@@ -1,7 +1,7 @@
 #![allow(dead_code)]
 
 use usvg::*;
-use anyhow::{Result};
+use anyhow::{Result, Context};
 use chrono::{Datelike, Timelike};
 use std::{fs, path, collections::HashMap, rc::Rc, time::Instant};
 use itertools::Itertools;
@@ -40,8 +40,8 @@ fn main() -> Result<()> {
     let icon_datas = unique_icons.into_par_iter()
         .map(|icon_name| {
             let icon_path = format!("in/icons/{}.svg", icon_name);
-            let svg_data = fs::read(icon_path)?;
-            let icon_data = IconData::from_svg_data(svg_data)?;
+            let svg_data = fs::read(icon_path).or(Err(anyhow::anyhow!("Could not find icon {}", &icon_name)))?;
+            let icon_data = IconData::from_svg_data(svg_data).context(icon_name.clone())?;
             Ok((icon_name, icon_data))
         })
         .collect::<Result<HashMap<String, IconData>>>()?;
@@ -69,36 +69,9 @@ fn main() -> Result<()> {
         let mappings_with_colour = icon_mappings.icons.par_iter()
             .map(|(instance_name, icon_name)| {
                 let icon_colour = palette.icons.get(instance_name).unwrap_or(&palette.icon_default);
-                (instance_name, icon_name, icon_colour)
-            });
-        
-        /*
-            Finding all unique combos of icons/colours used, for efficiency
-        */
-        let unique_icons_colours = mappings_with_colour.clone()
-            .map(|(_, icon_name, icon_colour)| (icon_name, icon_colour))
-            .collect::<Vec<(&String, &String)>>();
-        let unique_icons_colours = unique_icons_colours.into_iter().unique().collect::<Vec<(&String, &String)>>();
-        
-        /*
-            Generating spritesheet icon IDs for instances
-        */
-        let instance_icon_ids = mappings_with_colour
-            .map(|(instance_name, icon_name, icon_colour)| {
-                let icon_id = unique_icons_colours.par_iter()
-                    .position_any(|(unique_name, unique_colour)| *unique_name == icon_name && *unique_colour == icon_colour)
-                    .unwrap();
-                (instance_name, icon_id)
-            });
-
-        /*
-            Writing spritesheet icon IDs to file
-        */
-        let icon_id_out_file = format!("{}/icon_ids.txt", palette_out_dir);
-        let icon_id_out_contents = instance_icon_ids
-            .map(|(instance_name, icon_id)| format!("{}: {}\n", instance_name, icon_id))
-            .reduce(|| String::new(), |line_a, line_b| format!("{}{}", line_a, line_b));
-        fs::write(icon_id_out_file, icon_id_out_contents)?;
+                (instance_name, (icon_name, icon_colour))
+            })
+            .collect::<HashMap<_, _>>();
 
         /*
             Rendering icons
@@ -116,17 +89,22 @@ fn main() -> Result<()> {
             let overlay_colour = theme_colour_definitions.get(&palette.icon_overlay)
                 .ok_or(anyhow::anyhow!("No such overlay colour {} in palette {}", &palette.icon_overlay, palette.name))?;
                     
-            unique_icons_colours.par_iter().enumerate()
-                .map(|(icon_id, (icon_name, icon_colour))| {
+            mappings_with_colour.par_iter()
+                .map(|(instance_name, (icon_name, icon_colour))| {
                     let icon_data = icon_datas.get(*icon_name).ok_or(anyhow::anyhow!("No icon data for {}", icon_name))?;
                     
                     let main_layer_colour = theme_colour_definitions.get(*icon_colour)
                         .ok_or(anyhow::anyhow!("No such colour {} in palette {}", icon_colour, palette.name))?;
 
-                    let icon_layer_fills = IconLayerFills::from_colours(IconLayerColours::Duo {
-                        main: *main_layer_colour,
-                        overlay: *overlay_colour,
-                        fallback_opacity: palette.duotone_fallback_opacity
+                    // let icon_layer_fills = IconLayerFills::from_colours(IconLayerColours::Duo {
+                    //     main: *main_layer_colour,
+                    //     overlay: *overlay_colour,
+                    //     fallback_opacity: palette.duotone_fallback_opacity
+                    // });
+
+                    let icon_layer_fills = IconLayerFills::from_colours(IconLayerColours::Single {
+                        colour: *main_layer_colour,
+                        back_opacity: palette.single_tone_opacity
                     });
 
                     let svg_tree = Tree::create(Svg {
@@ -157,7 +135,7 @@ fn main() -> Result<()> {
 
                     let mut pixmap_duo = Pixmap::new(16, 16).ok_or(anyhow::anyhow!("Failed to make pixmap"))?;
                     resvg::render(&svg_tree, FitTo::Original, Transform::default(), pixmap_duo.as_mut()).ok_or(anyhow::anyhow!("Failed to render"))?;
-                    let render_path = format!("{}/explorer-icon-{}.png", theme_icons_out_dir, icon_id);
+                    let render_path = format!("{}/{}.png", theme_icons_out_dir, instance_name);
                     pixmap_duo.save_png(render_path)?;
 
                     Ok(())
