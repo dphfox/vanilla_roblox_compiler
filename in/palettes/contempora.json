@@ -1,0 +1,41 @@
+{
+    "name": "Contempora",
+
+    "theme_definitions": {
+        "light": {
+            "red": "ff00ff",
+            "orange": "ff00ff",
+            "gold": "ff00ff",
+            "lime": "ff00ff",
+            "mint": "ff00ff",
+            "cyan": "ff00ff",
+            "magenta": "ff00ff",
+            "indigo": "ff00ff",
+            "fuschia": "ff00ff",
+            "grey": "ff00ff",
+            "uncoloured": "ff00ff",
+            "always_white": "ffffff"
+        },
+        "dark": {
+            "red": "FF6666",
+            "orange": "FF8E4F",
+            "gold": "FFBC57",
+            "lime": "B4E54A",
+            "mint": "26D964",
+            "cyan": "44E5E5",
+            "indigo": "4CBCFF",
+            "magenta": "9694FF",
+            "fuschia": "E066FF",
+            "grey": "EBEBEB",
+            "uncoloured": "EBEBEB",
+            "always_white": "ffffff"
+        }
+    },
+
+    "icon_style": "single_tone",
+    "default_colour": "uncoloured",
+
+	"tag_colours": {
+
+	}
+}

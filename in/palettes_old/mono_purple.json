@@ -1,0 +1,60 @@
+{
+    "name": "Mono Purple",
+
+    "theme_definitions": {
+        "light": {
+            "purple": "af38cd",
+            "grey": "3f3f3f",
+            "always_white": "ebebeb"
+        },
+        "dark": {
+            "purple": "e066ff",
+            "grey": "ebebeb",
+            "always_white": "ebebeb"
+        }
+    },
+
+    "icon_style": "duotone",
+    "default_colour": "purple",
+    "duo_colour": "grey",
+    
+    "icon_colours": {
+        "ui": {
+            "Add": "grey",
+            "AddNoBorder": "grey",
+            "ArrowDown": "grey",
+            "ArrowRight": "grey",
+            "Bold_Default": "grey",
+            "Bold_Selected": "always_white",
+            "CloseWidget": "grey",
+            "Collapse": "grey",
+            "DropdownArrow": "grey",
+            "Expand": "grey",
+            "FavoritesTab_Default": "grey",
+            "FavoritesTab_Selected": "always_white",
+            "HorizontalDoubleArrow": "grey",
+            "InventoryTab_Default": "grey",
+            "InventoryTab_Selected": "always_white",
+            "Italic_Default": "grey",
+            "Italic_Selected": "always_white",
+            "More": "grey",
+            "ScrollbarDown": "grey",
+            "ScrollbarTriangle": "grey",
+            "ScrollbarUp": "grey",
+            "Strikethrough_Default": "grey",
+            "Strikethrough_Selected": "always_white",
+            "Underline_Default": "grey",
+            "Underline_Selected": "always_white",
+
+
+
+            "Archive": "always_white",
+            "MyGame": "always_white",
+            "New": "always_white",
+            "Recent": "always_white"
+        },
+
+        "general": {},
+        "instance": {}
+    }
+}
