@@ -1,0 +1,62 @@
+Lighting Objects
+	Services
+		> Lighting
+	Light Sources
+		> Light
+		> PointLight
+		> SpotLight
+		> SurfaceLight
+Events
+	Scripting
+		Networking
+			> RemoteEvent
+			> BindableEvent
+	Custom Events
+		> CustomEvent
+		> CustomEventReceiver
+	Plugins
+		> PluginDragEvent
+UI Containers
+	> CanvasGroup
+	> Frame
+	> ScrollingFrame
+Folders
+	> Folder
+Packages
+	> PackageLink
+	>> Asset Manager
+VFX
+	> Beam
+	> Explosion
+	> Fire
+	> ForceField
+	> Highlight
+	> ParticleEmitter
+	> Smoke
+	> Sparkles
+	> Trail
+Textures
+	Decals
+		> Decal
+		> FaceInstance
+		> Texture
+	Materials
+		Services
+			> MaterialService
+		Terrain
+			> TerrainDetail
+			> MaterialVariant
+			> SurfaceAppearance
+Clipboard
+	>> Paste
+	>> Cut
+	>> Copy
+	>> Duplicate
+	Insert
+	>> Toolbox
+	>> UI Editor
+	>> Insert Object
+	>> Insert Model
+	>> Insert Service
+	>> Insert Effects
+	>> Insert Spawn

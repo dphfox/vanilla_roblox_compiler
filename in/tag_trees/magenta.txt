@@ -1,0 +1,53 @@
+Animations
+	Animation Clips
+		> AnimationClip
+		> AnimationClipProvider
+	Animation Tracks
+		> AnimationStreamTrack
+		> AnimationTrack
+	Curve Animations
+		> CurveAnimation
+		> EulerRotationCurve
+		> FloatCurve
+		> MarkerCurve
+		> RotationCurve
+		> Vector3Curve
+	Armatures
+		> IKControl
+		> Bone
+		> FaceControls
+		>> Rig Builder
+	Animation Keyframes
+		> Keyframe
+		> KeyframeMarker
+		> KeyframeSequence
+		> KeyframeSequenceProvider
+	Animation Poses
+		> NumberPose
+		> Pose
+		> PoseBase
+	Tracker Animation
+		> TrackerStreamAnimation
+	Tweening
+		Services
+		> TweenService
+	> Tween
+	> TweenBase
+	Joints
+		> Motor6D
+	> Animation
+	> AnimationController
+	> AnimationRigData
+	> Animator
+	>> Animation Editor
+Post Processing
+	> BloomEffect
+	> BlurEffect
+	> ColorCorrectionEffect
+	> DepthOfFieldEffect
+	> PostEffect
+	> SunRaysEffect
+Alignment
+	>> Edit Pivot
+	>> Reset Pivot
+	>> Align Tool

@@ -1,0 +1,335 @@
+Services
+	Advertising
+		> AdService
+	Analytics
+		> AnalysticsService
+		> AnalyticsService
+		> RbxAnalyticsService
+	Animations
+		> AnimationFromVideoCreatorService
+		> AnimationFromVideoCreatorStudioService
+	Core / Internal
+		Roblox App
+			> AppUpdateService
+		Assets
+			Asset Uploading
+				> AssetImportService
+				> BulkImportService
+				> PublishService
+				> StudioPublishService
+			Packages
+				Asset Uploading
+					> PackageUIService
+				> PackageService
+			Mesh Wrapping
+				> TemporaryCageMeshProvider
+			Validation
+				> UGCValidationService
+				> UnvalidatedAssetService
+			> AssetCounterService
+			> AssetManagerService
+			> CacheableContentProvider
+			> HSRDataContentProvider
+			> MeshContentProvider
+			> SolidModelContentProvider
+			> StudioAssetService
+		Studio
+			Team Create
+				> TeamCreateService
+			Assets
+				> ToolboxService
+			> CalloutService
+		Networking
+			> BrowserService
+			> ConfigureServerService
+			> CookiesService
+			> HttpRbxApiService
+			> IXPService
+			> LoginService
+			> LuaWebService
+			> RtMessagingService
+		IO
+			Video
+				> VideoCaptureService
+			Emulation
+				> VirtualInputManager
+				> VirtualUser
+			> ControllerService
+			> GamepadService
+			> KeyboardService
+			> MouseService
+			> TouchInputService
+		Scripting
+			> CorePackages
+			> CoreScriptSyncService
+			> DraftsService
+			> LSPFileSyncService
+			> LuauScriptAnalyzerService
+			> RuntimeScriptService
+			> ScriptChangeService
+			> ScriptCloneWatcher
+			> ScriptCloneWatcherHelper
+			> ScriptRegistrationService
+			> ScriptService
+			> SnippetService
+			> TemporaryScriptService
+		Events
+			> EventIngestService
+		Geometry
+			CSG
+				> CSGDictionaryService
+				> NonReplicatedCSGDictionaryService
+			Terrain
+				> HeightmapImporterService
+			> FlyweightService
+		Data Models
+			> DataModelPatchService
+		Device
+			> DeviceIdService
+		Animations
+			> FaceAnimatorService
+			> FacialAnimationStreamingService
+			> FacialAnimationRecordingService
+		Flag Stands
+			> FlagStandService
+		Social
+			> FriendService
+		Studio
+			Plugins
+				> PluginManagementService
+				> PluginManagerInterface
+				> PluginPolicyService
+			Selection
+				> Selection
+			Emulation
+				> StudioDeviceEmulatorService
+			> ILegacyStudioBridge
+			> LegacyStudioBridge
+			> StudioData
+			> StudioHighDpiService
+			> VersionControlService
+		Physics
+			Joints
+				> JointsService
+			> ProcessInstancePhysicsService
+		Internationalisation
+			Languages
+				> LanguageService
+			Emulation
+				> PlayerEmulatorService
+		Data Persistence
+			Roblox App
+				> AppStorageService
+				> LocalStorageService
+			User
+				> UserStorageService
+			> MemStorageService
+		Level Of Detail
+			> LodDataService
+		Message Bus
+			> MessageBusConnection
+			> MessageBusService
+		Notifications
+			> NotificationService
+			> ToastNotificationService
+		UI
+			2D UI
+				Layer Collector Containers
+					Plugins
+						Services
+							> RobloxPluginGuiService
+			Layer Collectors
+				Plugins
+					> QWidgetPluginGui
+			2D UI Input
+				> TextBoxService
+		Replicated
+			General Storage
+				> RobloxReplicatedStorage
+		Sessions
+			> SessionService
+		Avatar
+			> AvatarImportService
+		Spawning
+			> SpawnerService
+		Logging
+			> StopWatchReporter
+			> TracerService
+		Players
+			> ThirdPartyUserService
+			> Visit
+		Scheduling
+			> TaskScheduler
+			> TimerService
+		Visual
+			> VisibilityService
+		> GuidRegistryService
+	Avatar
+		> AvatarEditorService
+	Assets
+		> AssetService
+		> BadgeService
+		> ContentProvider
+		> GamePassService
+		> InsertService
+		> MarketplaceService
+	Chat
+		Text Chat
+			> TextChatService
+		Voice Chat
+			> VoiceChatService
+	> Chat
+	Studio
+		Commands
+			> CommandService
+		Logging
+			> LogService
+		Plugins
+			> PluginManager
+			>> Manage Plugins
+			>> Plugins Folder
+		> ChangeHistoryService
+		> StudioService
+	Scripting
+		Collections
+			> CollectionService
+		Script Editor
+			> ScriptEditorService
+			> ScriptContext
+	IO
+		Draggers
+			> DraggerService
+		> ContextActionService
+		> HapticService
+		> UserInputService
+		> VRService
+	Data Models
+		Multiple Document Interface
+			> MultipleDocumentInterfaceInstance
+		> DataModel
+		> ServiceProvider
+	Data Persistence
+		Data Stores
+			> DataStoreService
+		Memory Stores
+			> MemoryStoreService
+	Geometry
+		> Debris
+		> Geometry
+	UI
+		3D UI
+			Part Inputs
+				> ProximityPromptService
+		> GuiService
+	Networking
+		> HttpService
+		> MessagingService
+	Physics
+		> PhysicsService
+	Game
+		Game Permissions
+			> PermissionsService
+		> PointsService
+	Internationalisation
+		> PolicyService
+	Scheduling
+		> RunService
+	Social
+		> GroupService
+		> SocialService
+		> UserService
+	Statistics
+		> Stats
+	Teleporting
+		> TeleportService
+	Text
+		> TextService
+Core / Internal
+	Assets
+		Asset Uploading
+			> AssetImportSession
+		> AssetDeliveryProxy
+Networking
+	> ClusterPacketCache
+IO
+	> Controller
+	> HumanoidController
+	> SkateboardController
+	> VehicleController
+UI
+	Layer Collector Containers
+		> CoreGui
+Scripting
+	> CoreScript
+Data Models
+	> CrossDMScriptChangeListener
+	> DataModelSession
+Analytics
+	> GoogleAnalyticsConfiguration
+Patches
+	> IncrementalPatchBuilder
+	> PatchMapping
+Level Of Detail
+	> LodDataEntity
+Data Persistence
+	> MemStorageConnection
+Geometry
+	CSG
+		> PartOperationAsset
+Reflection Metadata
+	Member
+		Classes
+			> ReflectionMetadataClass
+			> ReflectionMetadataClasses
+		Enums
+			> ReflectionMetadataEnum
+			> ReflectionMetadataEnumItem
+			> ReflectionMetadataEnums
+		Events
+			> ReflectionMetadataEvents
+		Functions
+			Callbacks
+				> ReflectionMetadataCallbacks
+			Yielding
+				> ReflectionMetadataYieldFunctions
+			> ReflectionMetadataFunctions
+		Properties
+			> ReflectionMetadataProperties
+		> ReflectionMetadata
+		> ReflectionMetadataItem
+Studio
+	Commands
+		> CommandInstance
+	Files
+		> File
+	Theming
+		> StudioTheme
+	Dock Widgets
+		>> Object Browser
+	Logging
+		Dock Widgets
+			>> Output
+Data Persistence
+	Data Stores
+		> DataStore
+		> GlobalDataStore
+		> OrderedDataStore
+	Memory Stores
+		> MemoryStoreQueue
+		> MemoryStoreSortedMap
+Statistics
+	Running Average Items
+		> RunningAverageItemDouble
+		> RunningAverageItemInt
+		> RunningAverageTimeIntervalItem
+	Total Count Items
+		> TotalCountTimeIntervalItem
+		> StatsItem
+Text Chat
+	> TextChannel
+	> TextChatCommand
+Voice Chat
+	> VoiceChannel
+	> VoiceChatInternal
+Abstract
+	> Instance

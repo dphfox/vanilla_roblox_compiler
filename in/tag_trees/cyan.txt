@@ -1,0 +1,91 @@
+UI
+    3D UI
+        Part Adornments
+            Handles
+                > ArcHandles
+                > Handles
+                > HandlesBase
+            Tracing Adornments
+                Wires
+                    > FloorWire
+                Lassos
+                    > SelectionLasso
+                    > SelectionPartLasso
+                    > SelectionPointLasso
+                > ParabolaAdornment
+        Selection Shapes
+            > InstanceAdornment
+            > SelectionBox
+            > SelectionSphere
+            > SurfaceSelection
+            > PartAdornment
+            > PVAdornment
+        Dialogues
+            > Dialog
+            > DialogChoice
+        Handle Adornments
+            > BoxHandleAdornment
+            > ConeHandleAdornment
+            > CylinderHandleAdornment
+            > HandleAdornment
+            > ImageHandleAdornment
+            > LineHandleAdornment
+            > SphereHandleAdornment
+            > WireframeHandleAdornment
+        > GuiBase3d
+    2D UI
+        Layer Collector Containers
+            Players
+                > PlayerGui
+            Plugins
+                Services
+                    > PluginGuiService
+            Services
+                > StarterGui
+            > BasePlayerGui
+        Layer Collectors
+            Plugins
+                > PluginGui
+                > DockWidgetPluginGui
+            Adorned UI
+                > BillboardGui
+                > SurfaceGui
+                > SurfaceGuiBase
+            > GuiMain
+            > LayerCollector
+            > ScreenGui
+        Prefabs
+            Hints
+                > Hint
+                > Message
+            Adorned UI
+                > ProximityPrompt
+            > ScreenshotHud
+        2D UI Widgets
+            2D UI Buttons
+                > GuiButton
+            2D UI Labels
+                > GuiLabel
+            > GuiObject
+        > GuiBase2d
+    > GuiBase
+Sky
+    > Atmosphere
+    > Clouds
+    > Sky
+Networking
+    Network Replicators
+        > NetworkReplicator
+    Network Instances
+        > NetworkMarker
+        > NetworkPeer
+    Interactive
+        > TouchTransmitter
+    Simulation
+        >> Start Server
+        >> Cleanup
+Players
+    Services
+        > StarterPlayer
+    User
+        > Player

@@ -1,0 +1,156 @@
+Parts
+	Ribbon Bar
+		>> Insert Block
+		>> Insert Sphere
+		>> Insert Wedge
+		>> Insert Corner Wedge
+		>> Insert Cylinder
+	Meshes
+		> MeshPart
+		> TriangleMeshPart
+	CSG
+		> PartOperation
+		> UnionOperation
+	> BasePart
+	> CornerWedgePart
+	> FormFactorPart
+	> Part
+	> PVInstance
+	> TrussPart
+	> WedgePart
+Data Objects
+	Single Values
+		> BinaryStringValue
+		> BoolValue
+		> BrickColorValue
+		> CFrameValue
+		> Color3Value
+		> DoubleConstrainedValue
+		> IntConstrainedValue
+		> IntValue
+		> NumberValue
+		> ObjectValue
+		> RayValue
+		> StringValue
+		> ValueBase
+		> Vector3Value
+	Text Chat
+		> BubbleChatConfiguration
+		> ChatInputBarConfiguration
+		> ChatWindowConfiguration
+		> TextChatConfigurations
+		> TextChatMessage
+		> TextChatMessageProperties
+		> TextSource
+	Voice Chat
+		> VoiceSource
+	Options
+		Data Persistence
+			Data Stores
+				Writing
+					> DataStoreSetOptions
+					> DataStoreIncrementOptions
+				Version History
+					> DataStoreVersionPages
+					> DataStoreOptions
+		Teleporting
+			> TeleportOptions
+	Settings
+		Analytics
+			> AnalysticsSettings
+		Debugging
+			> DebugSettings
+		Game
+			User
+				> UserGameSettings
+				> GameSettings
+		Abstract
+			> GenericSettings
+		Roblox App
+			> GlobalSettings
+		Assets
+			Asset Uploading
+				> ImporterAnimationSettings
+				> ImporterBaseSettings
+				> ImporterFacsSettings
+				> ImporterGroupSettings
+				> ImporterJointSettings
+				> ImporterMaterialSettings
+				> ImporterMeshSettings
+				> ImporterRootSettings
+		Scripting
+			> LuaSettings
+		Networking
+			> NetworkSettings
+		Physics
+			> PhysicsSettings
+		Visual
+			> RenderSettings
+		Studio
+			> Studio
+		User
+			> UserSettings
+	Parameters
+		UI
+			> GetTextBoundsParams
+		Networking
+			> HttpRequest
+	Results
+		Teleporting
+			> TeleportAsyncResult
+		Text Filtering
+			> TextFilterResult
+	> Configuration
+Information
+	Data Persistence
+		Data Stores
+			Keys
+				> DataStoreKey
+				> DataStoreKeyInfo
+			Version History
+				> DataStoreObjectVersionInfo
+				> DataStoreInfo
+Pages
+	Assets
+		> CatalogPages
+		> InventoryPages
+	Data Persistence
+		Data Stores
+			Keys
+				> DataStoreKeyPages
+			Listings
+				> DataStoreListingPages
+				> DataStorePages
+	Avatar
+		> EmotesPages
+		> OutfitPages
+	Social
+		> FriendPages
+	> Pages
+	> StandardPages
+2D UI Modifiers
+	2D UI Constraints
+		> UIAspectRatioConstraint
+		> UIConstraint
+		> UIPadding
+		> UIScale
+		> UISizeConstraint
+		> UITextSizeConstraint
+	2D UI Shaders
+		> UICorner
+		> UIGradient
+		> UIStroke
+	2D UI Layouts
+		> UIGridLayout
+		> UIGridStyleLayout
+		> UILayout
+		> UIListLayout
+		> UIPageLayout
+		> UITableLayout
+	> UIBase
+	> UIComponent
+Cameras
+	> Camera
+Settings
+	Game
+		>> Game Settings

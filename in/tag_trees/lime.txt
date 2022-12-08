@@ -1,0 +1,118 @@
+Scripting
+    Testing
+        Debugging
+            Breakpoints
+                Meta Breakpoints
+                    > MetaBreakpoint
+                    > MetaBreakpointContext
+                    > MetaBreakpointManager
+                > Breakpoint
+                > BreakpointManager
+                > DebuggerBreakpoint
+    Plugins
+    Services
+        > PluginDebugService
+    > DebuggablePluginWatcher
+    Pause
+    > PausedState
+    > PausedStateBreakpoint
+    > PausedStateException
+    Studio
+    > StudioScriptDebugEventListener
+    > DebuggerConnection
+    > DebuggerConnectionManager
+    > DebuggerLuaResponse
+    > DebuggerManager
+    > DebuggerUIService
+    > DebuggerVariable
+    > DebuggerWatch
+    > LocalDebuggerConnection
+    > RemoteDebuggerServer
+    > ScriptDebugger
+    > StackFrame
+    > ThreadState
+    Visual
+    > RenderingTest
+        Script Editor
+            > ScriptDocument
+        Services
+            > TestService
+        > FunctionalTest
+    Parallel Scripting
+        > Actor
+    Scripts
+        > BaseScript
+        > LuaSourceContainer
+        >> Run Script
+Humanoids
+    Humanoid Descriptions
+        > HumanoidDescription
+    > Humanoid
+    > Status
+Physics
+    Constraints
+		Force Constraints
+			> AlignOrientation
+			> AlignPosition
+			> AngularVelocity
+			> LinearVelocity
+			> LineForce
+			> Torque
+			> VectorForce
+		Rigid Constraints
+			> BallSocketConstraint
+			> CylindricalConstraint
+			> HingeConstraint
+			> Plane
+			> PlaneConstraint
+			> PrismaticConstraint
+			> RigidConstraint
+			> RodConstraint
+			> RopeConstraint
+			> SlidingBallConstraint
+			> SpringConstraint
+			> TorsionSpringConstraint
+			> UniversalConstraint
+			> WeldConstraint
+		Physics Collisions
+			> NoCollisionConstraint
+		> Constraint
+		>> Show Welds
+		>> Constraint Details
+		>> Draw on Top
+    Body Movers
+		> BodyAngularVelocity
+		> BodyForce
+		> BodyGyro
+		> BodyMover
+		> BodyPosition
+		> BodyThrust
+		> BodyVelocity
+		> RocketPropulsion
+    Joints
+		Motor Features
+			> Feature
+			> Hole
+			> MotorFeature
+		> DynamicRotate
+		> Glue
+		> JointInstance
+		> ManualGlue
+		> ManualSurfaceJointInstance
+		> ManualWeld
+		> Motor
+		> Rotate
+		> RotateP
+		> RotateV
+		> Snap
+		> VelocityMotor
+		> Weld
+    Draggers
+		>> Select Physical
+		>> Move Physical
+		>> Scale Physical
+		>> Rotate Physical
+    Physics Collisions
+    	>> Collision Groups
+Attachments
+  > Attachment

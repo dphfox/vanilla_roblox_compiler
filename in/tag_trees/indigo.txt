@@ -1,0 +1,83 @@
+Interactive
+Advertisement
+    > AdPortal
+    > AdGui
+Draggers
+    > AdvancedDragger
+    > Dragger
+    >> Select
+    >> Move
+    >> Scale
+    >> Rotate
+    >> Transform
+Tools
+    Tool Containers
+        Player
+            Gear Tools
+                > StarterGear
+            > Backpack
+    Services
+        > Hopper
+        > StarterPack
+    Tool Equippables
+        > BackpackItem
+        > HopperBin
+        > Tool
+Flag Stands
+    > Flag
+    > FlagStand
+Stations
+    Platforms
+        Vehicles
+            > SkateboardPlatform
+        > Platform
+    Seats
+        Vehicles
+            > VehicleSeat
+        > Seat
+Spawning
+    > SpawnLocation
+Teams
+    > Team
+    > Teams
+IO
+    Mouse IO
+        Players
+            > PlayerMouse
+        Plugins
+            > PluginMouse
+    > Mouse
+    Geometry
+        > ClickDetector
+    > InputObject
+Plugins
+    UI
+        Plugin Actions
+            > PluginAction
+            > PluginMenu
+        Plugin Toolbars
+            > PluginToolbar
+            > PluginToolbarButton
+    Standalone Plugins
+        Script Containers
+            > StandalonePluginScripts
+    > Plugin
+Client
+    Networking
+        Network Replicators
+            > ClientReplicator
+        Network Instances
+            > NetworkClient
+    Scripting
+        Scripts
+            > LocalScript
+    Script Containers
+        > PlayerScripts
+        > StarterPlayerScripts
+2D UI Text
+    2D UI Buttons
+        > TextButton
+    2D UI Labels
+        > TextLabel
+    2D UI Inputs
+        > TextBox

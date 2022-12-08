@@ -1,0 +1,38 @@
+Avatar
+	Character Controllers
+		> AirController
+		> ClimbController
+		> ControllerBase
+		> ControllerManager
+		> GroundController
+		> SwimController
+	Clothing
+		Insert
+			>> Create Accessory
+			>> Bulk Create Accessories
+		> Accessory
+		> Accoutrement
+		> Clothing
+		> Hat
+		> Pants
+		> Shirt
+		> ShirtGraphic
+		>> Accessory Fitting Tool
+	Body Colours
+		> BodyColors
+		> Skin
+	Scripting
+		Script Containers
+			> StarterCharacterScripts
+	> CharacterAppearance
+	Asset Uploading
+		>> Avatar Importer
+Editing
+	Geometry
+		>> Material Manager
+		>> Colour
+		>> Group
+		>> Ungroup
+		>> Lock Tool
+		>> Unlock All
+		>> Anchor

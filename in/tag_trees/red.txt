@@ -1,0 +1,48 @@
+Replicated
+	Services
+		General Storage
+			> ReplicatedFirst
+			> ReplicatedStorage
+	Scripting
+		Scripts
+			> ModuleScript
+Negative CSG
+	CSG
+		Geometry
+			> NegateOperation
+CSG
+	Editing
+		Ribbon Bar
+			>> Union
+			>> Negate
+			>> Separate
+Video
+	2D UI Widgets
+		> VideoFrame
+Models
+	> Model
+Audio
+	Sound Processing
+		> AssetSoundEffect
+		> ChannelSelectorSoundEffect
+		> ChorusSoundEffect
+		> CompressorSoundEffect
+		> CustomSoundEffect
+		> DistortionSoundEffect
+		> EchoSoundEffect
+		> EqualizerSoundEffect
+		> FlangeSoundEffect
+		> PitchShiftSoundEffect
+		> ReverbSoundEffect
+		> SoundEffect
+		> TremoloSoundEffect
+	Sound Sources
+		> Sound
+		> Speaker
+	Sound Groups
+		> SoundGroup
+	Services
+		> SoundService
+	Assets
+		>> Audio Discovery
+	>> Mute

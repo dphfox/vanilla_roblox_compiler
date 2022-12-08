@@ -1,0 +1,56 @@
+Internationalisation
+    Languages
+        Services
+            > LocalizationService
+        > LocalizationTable
+        > Translator
+    >> Localisation Tools
+Pathfinding
+    > Path
+    > PathfindingLink
+    > PathfindingModifier
+Terrain
+    > Terrain
+    > TerrainRegion
+    >> Terrain Editor
+World
+    Services
+        > Workspace
+    2D UI Widgets
+        > ViewportFrame
+    Studio
+        Editing
+            >> Explorer
+            >> Properties
+    > WorldModel
+    > WorldRoot
+Server
+    Networking
+        Network Instances
+            > NetworkServer
+        Network Replicators
+            > ServerReplicator
+    Scripting
+        Scripts
+            > Script
+    Services
+        Scripting
+            > ServerScriptService
+        General Storage
+            > ServerStorage
+2D UI Images
+    2D UI Buttons
+        > ImageButton
+    2D UI Labels
+        > ImageLabel
+Simulation
+    Play
+        Avatar
+            >> Play
+            >> Play Here
+        >> Run
+        >> Resume
+    Pause
+        >> Pause
+    Stop
+        >> Stop
