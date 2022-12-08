@@ -1,9 +1,16 @@
 use anyhow::Result;
 
 mod compile;
+mod contempora;
+
 mod vanilla;
 mod roblox;
 
 fn main() -> Result<()> {
-    compile::do_icon_compile()
+	if false {
+		compile::do_icon_compile()
+	} else {
+		contempora::do_tag_tree_parse()
+	}
+
 }
