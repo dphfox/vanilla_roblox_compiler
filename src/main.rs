@@ -7,10 +7,5 @@ mod vanilla;
 mod roblox;
 
 fn main() -> Result<()> {
-	if false {
-		compile::do_icon_compile()
-	} else {
-		contempora::do_lint_pass()
-	}
-
+	compile::do_icon_compile()
 }

@@ -1,12 +1,12 @@
 use usvg::*;
 use anyhow::{Result, Context};
 use chrono::{Datelike, Timelike};
-use std::{fs, path, collections::HashMap, rc::Rc, time::Instant};
+use std::{fs::{self, File}, path, collections::HashMap, rc::Rc, time::Instant};
 use itertools::Itertools;
 use tiny_skia::{Pixmap, Transform};
 use rayon::prelude::*;
 
-use crate::vanilla::*;
+use crate::{vanilla::*, contempora};
 
 fn render_icon(icon_data: &IconData, fills: IconFills, size_u32: u32) -> Result<Pixmap> {
     let svg_tree = Tree::create(Svg {
@@ -54,6 +54,17 @@ pub fn do_icon_compile() -> Result<()> {
     };
 
     let start_time = Instant::now();
+
+	/*
+		Loading icon tags
+	*/
+	print!("Loading icon tags... ");
+	let tag_system = contempora::TagSystem::from_file(File::open("in/tags.json")?)?;
+	println!("loaded.");
+
+	for concern in tag_system.lint() {
+		println!("-> (lint) {}", concern);
+	}
 
     /*
         Loading icon pack mappings
@@ -155,15 +166,20 @@ pub fn do_icon_compile() -> Result<()> {
                 })
                 .collect::<Result<()>>()?;
 
-                let category_fills = icon_palette.icon_fills
-                .get(category_name).ok_or(anyhow::anyhow!("No category {} in palette {}", category_name, icon_palette.name))?;
-
                 category_mappings.par_iter()
                 .map(|(file_name, icon_name)| {
                     let icon_data = icon_datas.get(icon_name)
                     .ok_or(anyhow::anyhow!("{}/{} uses nonexistent icon {}", category_name, file_name, icon_name))?;
 
-                    let fills = category_fills.get(file_name).unwrap_or(&icon_palette.default_fills);
+                    let mut fills = &icon_palette.default_fills;
+
+					if category_name == "instance" {
+						if let Some(tag_list) = tag_system.instance_tags.get(file_name) {
+							if let Some(tag_fill) = tag_list.iter().filter_map(|tag| icon_palette.tag_fills.get(tag)).next() {
+								fills = tag_fill;
+							}
+						}
+					}
 
                     icon_scales.par_iter()
                     .map(|scaling| {

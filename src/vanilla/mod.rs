@@ -96,7 +96,7 @@ impl IconTheme {
 pub struct IconPalette {
     pub name: String,
     pub default_fills: IconFills,
-    pub icon_fills: HashMap<String, HashMap<String, IconFills>>
+    pub tag_fills: HashMap<String, IconFills>
 }
 
 pub struct IconMappings {

@@ -17,7 +17,7 @@ struct IconPaletteJSON {
     default_colour: String,
     duo_colour: String,
 
-    icon_colours: HashMap<String, HashMap<String, String>>
+    tag_colours: HashMap<String, String>
 }
 
 impl IconPalette {
@@ -51,24 +51,19 @@ impl IconPalette {
 			.ok_or(anyhow::anyhow!("Default colour {} is not defined for palette {}", json.default_colour, json.name))?
 			.clone();
 
-            let icon_fills = json.icon_colours.iter()
-            .map(|(category_name, category_colours)| {
-                let category_fills = category_colours.iter()
-                .map(|(instance_name, colour_def)| {
-                    let instance_fill = colour_fills.get(&colour_def)
-                    .ok_or(anyhow::anyhow!("Colour {} for {} is not defined for palette {}", colour_def, instance_name, json.name))?;
-                    Ok((instance_name.clone(), instance_fill.clone()))
-                })
-                .collect::<Result<HashMap<_, _>>>()?;
+            let tag_fills = json.tag_colours.iter()
+            .map(|(tag_name, colour_def)| {
+				let tag_fill = colour_fills.get(&colour_def)
+				.ok_or(anyhow::anyhow!("Colour {} for tag {} is not defined for palette {}", colour_def, tag_name, json.name))?;
 
-                Ok((category_name.clone(), category_fills))
+				Ok((tag_name.clone(), tag_fill.clone()))
             })
             .collect::<Result<HashMap<_, _>>>()?;
 
             let palette = Self {
                 name: json.name.clone(),
                 default_fills,
-                icon_fills,
+                tag_fills,
             };
 
             Ok((theme, palette))

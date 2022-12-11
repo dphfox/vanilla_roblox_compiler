@@ -3,7 +3,7 @@ use std::{io::BufReader, fs::File, collections::HashMap};
 use anyhow::Result;
 use itertools::Itertools;
 #[derive(serde::Deserialize)]
-struct TagSystem {
+pub struct TagSystem {
 	pub all_tags: Vec<String>,
 	pub instance_tags: HashMap<String, Vec<String>>
 }
@@ -42,14 +42,4 @@ impl TagSystem {
 
 		concerns
 	}
-}
-
-pub fn do_lint_pass() -> Result<()> {
-	let sys = TagSystem::from_file(File::open("in/tags.json")?)?;
-
-	for concern in sys.lint() {
-		println!("[LINT] {}", concern);
-	}
-
-	Ok(())
 }
