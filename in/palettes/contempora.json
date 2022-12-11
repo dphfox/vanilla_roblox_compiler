@@ -27,13 +27,14 @@
             "magenta": "9694FF",
             "fuschia": "E066FF",
             "grey": "EBEBEB",
-            "uncoloured": "9CBBD8",
+            "uncoloured": "dddddd",
             "always_white": "ffffff"
         }
     },
 
     "icon_style": "single_tone",
     "default_colour": "uncoloured",
+	"duo_colour": "uncoloured",
 
 	"tag_colours": {
 		"Animation": "magenta",
@@ -50,10 +51,10 @@
 		"Error": "red",
 		"File": "grey",
 		"Folder": "gold",
-		"Gameplay": "blue",
+		"Gameplay": "indigo",
 		"Geometry > CSG > Negative": "red",
 		"Geometry > Model": "red",
-		"Geometry > Terrain": "green",
+		"Geometry > Terrain": "mint",
 		"Geometry": "grey",
 		"Input": "cyan",
 		"Internal": "grey",
@@ -62,7 +63,7 @@
 		"Material": "gold",
 		"Mesh": "fuschia",
 		"Network": "cyan",
-		"Pathfinding": "green",
+		"Pathfinding": "mint",
 		"Physics": "lime",
 		"Replicated": "red",
 		"Scripting": "grey",

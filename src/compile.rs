@@ -43,6 +43,19 @@ fn render_icon(icon_data: &IconData, fills: IconFills, size_u32: u32) -> Result<
     Ok(pixmap)
 }
 
+fn get_fill_for<'a>(tag_fills: &'a HashMap<String, IconFills>, _tag_system: &contempora::TagSystem, tag: &str) -> Option<&'a IconFills> {
+	let mut fill = None;
+	let mut partial_tag = String::new();
+	for part in tag.split(">") {
+		partial_tag = format!("{}>{}", partial_tag, part);
+		if let Some(partial_tag_fill) = tag_fills.get(&partial_tag) {
+			fill = Some(partial_tag_fill);
+		}
+	}
+
+	fill
+}
+
 pub fn do_icon_compile() -> Result<()> {
     let working_directory = "E:/# High Speed Output/Vanilla/";
     let root_out_dir = {
@@ -175,7 +188,7 @@ pub fn do_icon_compile() -> Result<()> {
 
 					if category_name == "instance" {
 						if let Some(tag_list) = tag_system.instance_tags.get(file_name) {
-							if let Some(tag_fill) = tag_list.iter().filter_map(|tag| icon_palette.tag_fills.get(tag)).next() {
+							if let Some(tag_fill) = tag_list.iter().filter_map(|tag| get_fill_for(&icon_palette.tag_fills, &tag_system, tag)).next() {
 								fills = tag_fill;
 							}
 						}
