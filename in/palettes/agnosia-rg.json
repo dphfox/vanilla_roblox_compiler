@@ -1,0 +1,48 @@
+{
+	"name": "Agnosia (red & green blind)",
+
+	"theme_definitions": {
+		"light": {
+			"1_axis":				{"base": "FF7562", "duo": "333333"},
+			"1_vibrant":			{"base": "B4AC00", "duo": "333333"},
+			"1_light":				{"base": "787A00", "duo": "333333"},
+			"2_light":				{"base": "0024DE", "duo": "333333"},
+			"2_vibrant":			{"base": "7A59FF", "duo": "333333"},
+			"2_axis":				{"base": "D667BD", "duo": "333333"},
+			"dark_grey":			{"base": "333333", "duo": "000000"},
+			"light_grey":			{"base": "000000", "duo": "333333"},
+			"always_white":			{"base": "FFFFFF", "duo": "FFFFFF"}
+		},
+		"dark": {
+			"1_axis":				{"base": "FF8E5E", "duo": "FFFFFF"},
+			"1_vibrant":			{"base": "BAD900", "duo": "FFFFFF"},
+			"1_light":				{"base": "FCFF77", "duo": "FFFFFF"},
+			"2_light":				{"base": "9FA9FF", "duo": "FFFFFF"},
+			"2_vibrant":			{"base": "8060FF", "duo": "FFFFFF"},
+			"2_axis":				{"base": "FF72AD", "duo": "FFFFFF"},
+			"dark_grey":			{"base": "BBBBBB", "duo": "FFFFFF"},
+			"light_grey":			{"base": "FFFFFF", "duo": "AAAAAA"},
+			"always_white":			{"base": "FFFFFF", "duo": "FFFFFF"}
+		}
+	},
+	"default_colour": "dark_grey",
+
+	"tag_colours": {
+		"Audio":				"1_axis",
+		"Audio Em":				"dark_grey",
+		"Players":				"1_vibrant",
+		"Players Em":			"dark_grey",
+		"World":				"1_light",
+		"World Em":				"dark_grey",
+		"Client":				"2_vibrant",
+		"Client Em":			"dark_grey",
+		"Scripting":			"2_light",
+		"Scripting Em":			"dark_grey",
+		"Visual":				"2_vibrant",
+		"Visual Em":			"dark_grey",
+		"Human Interface":		"2_axis",
+		"Human Interface Em":	"dark_grey",
+		"Storage":				"light_grey",
+		"Always White":			"always_white"
+	}
+}

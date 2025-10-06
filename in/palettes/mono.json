@@ -1,0 +1,19 @@
+{
+	"name": "Mono",
+
+	"theme_definitions": {
+		"light": {
+			"light_grey":		{"base": "555555", "duo": "222222"},
+			"always_white":		{"base": "FFFFFF", "duo": "FFFFFF"}
+		},
+		"dark": {
+			"light_grey":		{"base": "DDDDDD", "duo": "FFFFFF"},
+			"always_white":		{"base": "FFFFFF", "duo": "FFFFFF"}
+		}
+	},
+	"default_colour": "light_grey",
+
+	"tag_colours": {
+		"Always White":		"always_white"
+	}
+}

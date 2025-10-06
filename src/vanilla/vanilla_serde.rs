@@ -8,14 +8,23 @@ use std::path;
 
 use crate::vanilla::*;
 
+fn parse_hex(value_str: &str) -> Result<Color> {
+    let value_hex: HexColor = value_str.parse()?;
+    Ok(Color::new_rgb(value_hex.r, value_hex.g, value_hex.b))
+}
+
+#[derive(Serialize, Deserialize)]
+struct IconPaletteColourJSON {
+    base: String,
+    duo: String
+}
+
 #[derive(Serialize, Deserialize)]
 struct IconPaletteJSON {
     name: String,
 
-    theme_definitions: HashMap<String, HashMap<String, String>>,
-
+    theme_definitions: HashMap<String, HashMap<String, IconPaletteColourJSON>>,
     default_colour: String,
-    duo_colour: String,
 
     tag_colours: HashMap<String, String>
 }
@@ -31,19 +40,17 @@ impl IconPalette {
             };
 
             let parsed_definitions = definitions.into_iter()
-            .map(|(key, value_str)| {
-                let value_hex: HexColor = value_str.parse()?;
-                let value_colour = Color::new_rgb(value_hex.r, value_hex.g, value_hex.b);
-                Ok((key, value_colour))
+            .map(|(key, pal_col)| {
+                Ok((key, (
+                    parse_hex(&pal_col.base)?,
+                    parse_hex(&pal_col.duo)?
+                )))
             })
             .collect::<Result<HashMap<_, _>>>()?;
 
-			let duo_colour = parsed_definitions.get(&json.duo_colour)
-			.ok_or(anyhow::anyhow!("Duo colour {} is not defined for palette {}", &json.duo_colour, json.name))?;
-
             let colour_fills = parsed_definitions.iter()
-			.map(|(key, colour)| {
-				Ok((key, IconFills::from_colours(*colour, *duo_colour)))
+			.map(|(key, (base_col, duo_col))| {
+				Ok((key, IconFills::from_colours(*base_col, *duo_col)))
 			})
 			.collect::<Result<HashMap<_, _>>>()?;
 

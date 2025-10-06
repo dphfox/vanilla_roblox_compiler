@@ -5,6 +5,7 @@ use itertools::Itertools;
 #[derive(serde::Deserialize)]
 pub struct TagSystem {
 	pub all_tags: Vec<String>,
+	pub general_tags: HashMap<String, Vec<String>>,
 	pub instance_tags: HashMap<String, Vec<String>>
 }
 

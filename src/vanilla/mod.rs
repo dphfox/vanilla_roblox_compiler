@@ -23,7 +23,7 @@ impl IconData {
             if let NodeKind::Path(ref mut path) = *node.borrow_mut() {
                 let fill = path.fill.as_ref().ok_or(anyhow::anyhow!("No fill found for path"))?;
 				let is_overlay = match fill.paint {
-					Paint::Color(paint) => paint.blue < 200 && paint.red < 200,
+					Paint::Color(paint) => paint.blue > 200 && paint.red > 200 && paint.green > 200,
 					Paint::Link(_) => false
 				};
                 let is_secondary = fill.opacity.to_u8() < 200;
